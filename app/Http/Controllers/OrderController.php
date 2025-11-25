@@ -47,7 +47,7 @@ class OrderController extends Controller
 
 
         // Set your Merchant Server Key
-        Config::$serverKey = 'SB-Mid-server-OpNtmekLBADGKkgk6NhxmM3R';
+        Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         Config::$isProduction = false;
 
         $params = [
