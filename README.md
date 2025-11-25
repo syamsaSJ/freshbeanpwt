@@ -1,6 +1,6 @@
 # FreshBeanPWT
 
-FreshBeanPWT adalah sebuah website e-commerce khusus kopi yang menyediakan berbagai produk kopi premium dari berbagai daerah. Website ini dirancang untuk memberikan pengalaman berbelanja yang mudah, cepat, dan aman bagi para pecinta kopi.
+FreshBeanPWT adalah website e-commerce untuk toko butik kopi yang menyediakan berbagai kopi premium dari berbagai daerah. Website ini dirancang untuk memberikan pengalaman berbelanja yang mudah, cepat, dan aman bagi para pecinta kopi.
 
 ---
 
