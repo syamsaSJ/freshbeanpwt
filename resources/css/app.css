@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bar-chart-widget {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Light mode styles (default) */
+body {
+    background-color: #EAFDCF; /* Light background color */
+}
+
+[x-cloak] {
+    display: none !important;
+}

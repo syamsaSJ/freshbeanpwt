@@ -1,0 +1,39 @@
+<div class="breadcrumb">
+    <ol class="flex items-center whitespace-nowrap">
+        <li class="inline-flex items-center">
+            <a class="flex items-center text-sm text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+                href="{{ route('dashboard') }}">
+                <svg class="shrink-0 me-3 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                Dashboard
+            </a>
+            <svg class="shrink-0 mx-2 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"></path>
+            </svg>
+        </li>
+        <li class="inline-flex items-center text-sm font-semibold text-gray-800 truncate" aria-current="page">
+            Product
+        </li>
+    </ol>
+</div>
+<div class="products">
+    @foreach ($products as $product)
+        <div class="product">
+            <a href="{{ route('products.show', $product->id) }}">
+                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="h-9 w-9 rounded">
+                <h3>{{ $product->name }}</h3>
+                <p>Rp. {{ number_format($product->price, 0, ',', '.') }}</p>
+            </a>
+        </div>
+    @endforeach
+</div>
+
+<div class="pagination mt-6">
+    {{ $products->links('vendor.pagination.tailwind') }}
+</div>
